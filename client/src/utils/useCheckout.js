@@ -14,6 +14,7 @@ export default function useCheckout() {
             })
 
         if (session) {
+            localStorage.removeItem('persist:root');
             redirectToCheckout({ sessionId: session.id })
         }
     }
